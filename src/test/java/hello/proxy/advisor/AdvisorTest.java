@@ -49,7 +49,7 @@ public class AdvisorTest {
         ProxyFactory proxyFactory = new ProxyFactory(target);
         NameMatchMethodPointcut pointcut = new NameMatchMethodPointcut();
         pointcut.setMappedName("save"); //메서드명이 "save"인 경우에만 Advice적용
-        DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pointcut, new TimeAdvice());// 항상 참인 포인트 컷
+        DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pointcut, new TimeAdvice());
         proxyFactory.addAdvisor(advisor);
         ServiceInterface proxy = (ServiceInterface) proxyFactory.getProxy();
 
